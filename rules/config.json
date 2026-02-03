@@ -1,0 +1,21 @@
+{
+  "default_currency": "BRL",
+  "sources": {
+    "nubank": {
+      "file_patterns": [
+        "nubank"
+      ]
+    },
+    "itau": {
+      "file_patterns": [
+        "itau"
+      ]
+    },
+    "xp": {
+      "file_patterns": [
+        "xp",
+        "posicaodetalhada"
+      ]
+    }
+  }
+}
