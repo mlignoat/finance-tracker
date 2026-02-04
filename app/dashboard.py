@@ -116,15 +116,18 @@ with g2:
 
 g3, g4 = st.columns(2)
 
-st.subheader("Gastos por categoria")
+st.subheader("Gastos por categoria (somente expense)")
+gastos = f[(f["type"] == "expense") & (f["amount"] < 0)].copy()
+
 by_cat = (
-    f.loc[f["amount"] < 0]
-    .groupby("category", as_index=False)["amount"]
+    gastos.groupby("category", as_index=False)["amount"]
     .sum()
     .sort_values("amount")
 )
 fig_cat = px.bar(by_cat, x="amount", y="category", orientation="h")
 st.plotly_chart(fig_cat, use_container_width=True)
+
+st.caption(f"Linhas consideradas no gráfico: {len(gastos)}")
 
 
 with g3:
@@ -144,6 +147,13 @@ with g4:
     t = f.groupby("type", as_index=False)["amount"].sum()
     fig4 = px.bar(t, x="type", y="amount")
     st.plotly_chart(fig4, use_container_width=True)
+
+    st.subheader("Transferências (saídas)")
+    tr = f[(f["type"] == "transfer") & (f["amount"] < 0)].copy()
+    by_tr = tr.groupby("category", as_index=False)["amount"].sum().sort_values("amount")
+    fig_tr = px.bar(by_tr, x="amount", y="category", orientation="h")
+    st.plotly_chart(fig_tr, use_container_width=True)
+
 
 st.divider()
 

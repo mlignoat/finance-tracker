@@ -1,4 +1,30 @@
 priority,pattern,category,subcategory,type_hint,notes
+1,^PIX\s+TRANSF,Transferências,PIX enviado,transfer,PIX transferência
+2,^PIX\s+QRS\s+,Transferências,PIX QR enviado,transfer,PIX QR
+5,CONQUER|MCRYPAY.*CONQU,Educacao,Cursos,expense,
+40,INDIGO,Servicos,Geral,expense,
+
+priority,pattern,category,subcategory,type_hint,notes
+
+1,FATURA\s*ITAU|FATURAITAU|PAGAMENTO\s*FATURA|PAGTO\s*FATURA,Transferências,Pagamento de fatura,transfer,Evita duplicar gasto cartão
+2,PIX\s*QRS\s*TELEFONICA|TELEFONICA|VIVO|CLARO|TIM,Contas,Telefonia,expense,
+
+5,APPLE\.COM/BILL|APPLE\s*BILLING|ITUNES,Assinaturas,Apple,expense,
+6,AMAZONPRIME|AMAZON\s*PRIME,Assinaturas,Amazon Prime,expense,
+7,META\*|FACEBOOK|INSTAGRAM,Assinaturas,Meta,expense,
+
+10,SHOPEE\s*\*,Compras,E-commerce,expense,
+11,PAYPAL\s*\*,Compras,PayPal,expense,
+12,NUVEM|NUUVEM|NINTENDO|ESHOP|DM\*NINTENDO,Entretenimento,Games,expense,
+
+15,TERA\s*-\s*NUPAY|NUPAY,Compras,Parcelado NuPay,expense,
+
+20,PUMA|ADIDAS|NIKE|SPORT,Vestuário,Roupas,expense,
+
+30,PAG\s*BOLETO|BOLETO\s*RESIDENCIAL|RESIDENCIAL,Contas,Boletos,expense,
+
+
+priority,pattern,category,subcategory,type_hint,notes
 1,PIX RECEBIDO|TED RECEBIDA|DOC RECEBIDO,Renda,Transferência recebida,income,
 2,SAL(A|Á)RIO|PROVENTO|FOLHA|PAGAMENTO,Renda,Salário,income,
 3,PIX ENVIADO|TED ENVIADA|DOC ENVIADO,Transferências,Saída,transfer,
