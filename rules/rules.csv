@@ -3,6 +3,7 @@ priority,pattern,category,subcategory,type_hint,notes
 2,^PIX\s+QRS\s+,Transferências,PIX QR enviado,transfer,PIX QR
 5,CONQUER|MCRYPAY.*CONQU,Educacao,Cursos,expense,
 40,INDIGO,Servicos,Geral,expense,
+1,EST\s+TRANSFERENCIA\s+CONTA,Transferências,Transferência entre contas,transfer,
 
 priority,pattern,category,subcategory,type_hint,notes
 
