@@ -106,18 +106,18 @@ def append_to_ledger(new_df: pd.DataFrame, processed_dir: Path) -> Tuple[Path, P
     pq_path = processed_dir / "ledger.parquet"
 
     if csv_path.exists():
-        old = pd.read_csv(csv_path)
+        old = pd.read_csv(csv_path, dtype={"tx_id": "string", "external_id": "string"})
         # tenta parse de date se vier string
         if "date" in old.columns:
             old["date"] = pd.to_datetime(old["date"], errors="coerce")
         combined = pd.concat([old, new_df], ignore_index=True)
+        combined["tx_id"] = combined["tx_id"].astype(str)
         combined = combined.drop_duplicates(subset=["tx_id"], keep="first")
     else:
         combined = new_df.drop_duplicates(subset=["tx_id"], keep="first")
 
     combined.to_csv(csv_path, index=False, encoding="utf-8")
-
-    # parquet é opcional
+    # parquet é opcional Teste
     try:
         combined.to_parquet(pq_path, index=False)
     except Exception:
