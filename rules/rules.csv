@@ -1,1 +1,25 @@
 priority,pattern,category,subcategory,type_hint,notes
+1,PIX RECEBIDO|TED RECEBIDA|DOC RECEBIDO,Renda,Transferência recebida,income,
+2,SAL(A|Á)RIO|PROVENTO|FOLHA|PAGAMENTO,Renda,Salário,income,
+3,PIX ENVIADO|TED ENVIADA|DOC ENVIADO,Transferências,Saída,transfer,
+
+10,IFOOD|RAPPI|UBER EATS|UBEREATS,Alimentação,Delivery,expense,
+11,MERCADO|SUPERMERCADO|CARREFOUR|ZAFARI|ASSA(I|Í)|ATACAD(A|ÃO)O|BIG,Alimentação,Supermercado,expense,
+12,PADARIA|CAF(E|É)|LANCHONETE|RESTAURANTE|PIZZARIA|HAMBURGUER,Alimentação,Refeições,expense,
+
+20,UBER|99APP|99 POP,Transporte,App,expense,
+21,POSTO|SHELL|IPIRANGA|BR PETROBRAS|ALE COMBUST,Carro,Combustível,expense,
+22,ESTACIONAMENTO|PARK|SEM PARAR|VIA FACIL,Carro,Pedágio/Estacionamento,expense,
+
+30,NETFLIX|SPOTIFY|AMAZON PRIME|PRIME VIDEO|DISNEY|HBO|MAX|YOUTUBE PREMIUM,Assinaturas,Streaming,expense,
+31,VIVO|CLARO|TIM|OI,Contas,Telefonia/Internet,expense,
+32,ENERGIA|RGE|CPFL|CEEE|LIGHT|ENEL,Contas,Energia,expense,
+33,ÁGUA|CORSAN|SABESP,Contas,Água,expense,
+
+40,FARMACIA|DROGA|PANVEL|S(A|Ã)O JO(A|Ã)O|PAGUE MENOS,Saúde,Farmácia,expense,
+41,HOSPITAL|CLINICA|LABORATORIO|EXAME|CONSULTA,Saúde,Consultas/Exames,expense,
+
+50,SEGURO,Seguros,Geral,expense,
+
+60,TESOURO|CDB|LCI|LCA|FII|ETF|A(C|Ç)(A|Ã)O|ACOES|XP INVEST,Investimentos,Aplicações,investment,
+
